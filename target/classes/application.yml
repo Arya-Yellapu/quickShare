@@ -1,0 +1,36 @@
+server:
+  tomcat:
+    relaxed-query-chars: ['[',']']
+spring:
+  datasource:
+    password: Welcome90
+    url: jdbc:postgresql://localhost:5432/quickshare
+    username: postgres
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 675211299298-7bag81ade5j6814m874pq9kilpnastip.apps.googleusercontent.com
+            client-secret: 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
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: aryayellapu67@gmail.com
+    password: zfsnoplbgoygqulq
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+  servlet: 
+    multipart: 
+       enabled: true 
+       file-size-threshold: 200KB   
+       max-file-size:       -1 
+       max-request-size:    -1 
